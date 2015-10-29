@@ -1,0 +1,14 @@
+Package: swiRcharts
+Type: Package
+Title: Helper functions for rcharts
+Version: 1.0
+Date: 2015-01-15
+Author: Who wrote it
+Depends:
+    R (>= 3.0.0),
+    rCharts,
+    parsetR,
+    swiTheme
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?

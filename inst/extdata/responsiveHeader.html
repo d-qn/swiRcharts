@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<title>swissinfo.ch</title>
+
+<style type="text/css">
+
+/* ensure data labels are not visible over the tooltip: 
+http://stackoverflow.com/questions/15130311/highcharts-labels-visible-over-tooltip */
+.label { 
+  z-index: 1 !important;
+}
+
+.highcharts-tooltip span {
+  background-color:white;
+  opacity:1;
+  z-index:9999 !important;
+  border-radius: 3px;
+}
+
+.tooltip {
+  padding:5px;
+}
+
+    
+/*  #######   header and footer styling   ########*/  
+
+body, h1, h2, h3, h4, h5, h6, .descr, td, table {
+   font-family: 'Open Sans', sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin:3px 4px 3px 5px;
+}
+
+#cite {
+    font-size: 0.5em; color: #B8B8B8; text-align: right; margin-top:1px; margin-right:10px; padding-bottom: 3px;
+}
+#cite a { text-decoration: none; color: #821122; }
+    
+.descr {
+ font-size: 0.8em; color: #707070;
+}
+     
+h1 {
+   font-size:2em;
+}
+
+h2 {
+   font-size:1.5em;
+   font-weight: lighter;
+   line-height: 115%;
+}
+
+h3 {
+   font-size:1.2em
+}
+
+h4 {
+   font-size:1.1em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+    
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+table, td, th {
+  border: none;
+  font-size:0.95em;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/highcharts-more.js"></script>
+<script src="js/exporting.js"></script>
+<script src="js/heatmap.js"></script>
+

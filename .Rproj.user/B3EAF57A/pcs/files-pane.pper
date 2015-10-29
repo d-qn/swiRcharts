@@ -1,0 +1,9 @@
+{
+    "path" : "~/swissinfo/_helpers/swiRcharts/R",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
