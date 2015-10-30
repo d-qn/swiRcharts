@@ -1,5 +1,5 @@
 {
-    "path" : "~/swissinfo/_helpers/swiRcharts",
+    "path" : "~/swissinfo/_helpers/swiRcharts/inst/extdata",
     "sortOrder" : [
         {
             "ascending" : true,

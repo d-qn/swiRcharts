@@ -5,10 +5,16 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 
 #cite {
-    font-size: 0.2em; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 7.5px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
-    
+
+#footer {
+    font-size: 8.5px; color: #909090; margin-top:13px; 
+}
+#footer a { text-decoration: none; color: #821122; }
+
+
 .descr {
  font-size: 1.2em; color: #707070;
 }
@@ -24,7 +30,8 @@ h2 {
 }
 
 h3 {
-   font-size:1.5em
+   font-size:1.5em;
+   color: #696969; 
 }
 
 h4 {
@@ -81,18 +88,6 @@ a, a:visited {
 .parset .ribbon path.active { fill-opacity: .9; }
 .parset .ribbon-mouse path { fill-opacity: 0; }
 
-/* Original colour palette
-.parset .category-0 { fill: #1f77b4; stroke: #1f77b4; }
-.parset .category-1 { fill: #ff7f0e; stroke: #ff7f0e; }
-.parset .category-2 { fill: #2ca02c; stroke: #2ca02c; }
-.parset .category-3 { fill: #d62728; stroke: #d62728; }
-.parset .category-4 { fill: #9467bd; stroke: #9467bd; }
-.parset .category-5 { fill: #8c564b; stroke: #8c564b; }
-.parset .category-6 { fill: #e377c2; stroke: #e377c2; }
-.parset .category-7 { fill: #7f7f7f; stroke: #7f7f7f; }
-.parset .category-8 { fill: #bcbd22; stroke: #bcbd22; }
-.parset .category-9 { fill: #17becf; stroke: #17becf; }
-*/
 
 .parset .category-0 { fill: #ab3d3f; stroke: #ab3d3f; }
 .parset .category-1 { fill: #666699; stroke: #666699; }

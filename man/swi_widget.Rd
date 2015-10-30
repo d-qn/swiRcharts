@@ -6,14 +6,15 @@
 \usage{
 swi_widget(widget.html, output.html = "parset_swi.html", output = ".",
   source = "source:", author = "Duc-Quang Nguyen | swissinfo.ch",
-  h2 = "title", descr = "descriptive text", h3 = "subtitle")
+  h2 = "title", descr = "descriptive text", h3 = "subtitle",
+  footer = "")
 }
 \arguments{
 \item{widget.html,output.html}{character file path to the input widget html and the output reponsive html}
 
-\item{output}{a path to a folder where the output html file and depending js libraries will be saved}
+\item{output}{a path to a folder where the output html file and the js library folder will be saved}
 
-\item{source,author,h2,descr,h3}{characters}
+\item{source,author,h2,descr,h3,footer}{characters}
 }
 \description{
 Helper functions to create a container for htmlwidget with javascript library files
