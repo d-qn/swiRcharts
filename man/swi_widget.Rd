@@ -4,15 +4,12 @@
 \alias{swi_widget}
 \title{Helper functions for htmlwidget}
 \usage{
-swi_widget(widget.html, output.html = "parset_swi.html", lib = "js",
-  output = ".", source = "source:",
-  author = "Duc-Quang Nguyen | swissinfo.ch", h2 = "title",
-  descr = "descriptive text", h3 = "subtitle")
+swi_widget(widget.html, output.html = "parset_swi.html", output = ".",
+  source = "source:", author = "Duc-Quang Nguyen | swissinfo.ch",
+  h2 = "title", descr = "descriptive text", h3 = "subtitle")
 }
 \arguments{
 \item{widget.html,output.html}{character file path to the input widget html and the output reponsive html}
-
-\item{lib}{character file path to the javacript libraries}
 
 \item{output}{a path to a folder where the output html file and depending js libraries will be saved}
 

@@ -1,34 +1,34 @@
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans', sans-serif;
    background-color: white;
-   font-size: 10px;
+   font-size: 0.6em;
 }
 
 #cite {
-    font-size: 0.5em; color: #B8B8B8; text-align: right; margin-top:1px; margin-right:10px; padding-bottom: 3px;
+    font-size: 0.2em; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
     
 .descr {
- font-size: 0.8em; color: #707070;
+ font-size: 1.2em; color: #707070;
 }
      
 h1 {
-   font-size:2em;
+   font-size:3.3em;
 }
 
 h2 {
-   font-size:1.5em;
+   font-size:2.7em;
    font-weight: lighter;
    line-height: 115%;
 }
 
 h3 {
-   font-size:1.2em
+   font-size:1.5em
 }
 
 h4 {
-   font-size:1.1em;
+   font-size:1.5em;
 }
 
 h5 {
@@ -57,7 +57,6 @@ blockquote {
 }
 
 body {
-	font-size:0.8em;
 	max-width:100%;
 }
 
@@ -76,12 +75,13 @@ a, a:visited {
 .parset .dimension rect { stroke: none; fill-opacity: 0; }
 .parset .dimension > rect, .category-background { fill: #fff; }
 .parset .dimension > rect { display: none; }
-.parset .category:hover rect { fill-opacity: .3; }
-.parset .dimension:hover > rect { fill-opacity: .3; }
+.parset .category:hover rect { fill-opacity: .5; }
+.parset .dimension:hover > rect { fill-opacity: .5; }
 .parset .ribbon path { stroke-opacity: 0; fill-opacity: .5; }
 .parset .ribbon path.active { fill-opacity: .9; }
 .parset .ribbon-mouse path { fill-opacity: 0; }
 
+/* Original colour palette
 .parset .category-0 { fill: #1f77b4; stroke: #1f77b4; }
 .parset .category-1 { fill: #ff7f0e; stroke: #ff7f0e; }
 .parset .category-2 { fill: #2ca02c; stroke: #2ca02c; }
@@ -92,9 +92,23 @@ a, a:visited {
 .parset .category-7 { fill: #7f7f7f; stroke: #7f7f7f; }
 .parset .category-8 { fill: #bcbd22; stroke: #bcbd22; }
 .parset .category-9 { fill: #17becf; stroke: #17becf; }
+*/
+
+.parset .category-0 { fill: #ab3d3f; stroke: #ab3d3f; }
+.parset .category-1 { fill: #666699; stroke: #666699; }
+.parset .category-2 { fill: #669999; stroke: #669999; }
+.parset .category-3 { fill: #663333; stroke: #663333; }
+.parset .category-4 { fill: #366096; stroke: #366096; }
+.parset .category-5 { fill: #996699; stroke: #996699; }
+.parset .category-6 { fill: #ac673e; stroke: #ac673e; }
+.parset .category-7 { fill: #3a9736; stroke: #3a9736; }
+.parset .category-8 { fill: #333366; stroke: #333366; }
+.parset .category-9 { fill: #999966; stroke: #999966; }
+
 
 .parsets.tooltip {
   background-color: rgba(242, 242, 242, .6);
   position: absolute;
-  padding: 2px;
+  padding: 3px;
+  font-size:1.1em;
 }
