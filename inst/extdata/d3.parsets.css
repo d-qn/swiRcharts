@@ -10,7 +10,10 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
-    font-size: 8.5px; color: #909090; margin-top:13px; 
+    font-size: 9px; color: #9B9B9B; 
+    margin-top:8px; 
+    background-color: #F6F6F6;
+    padding: 8px;
 }
 #footer a { text-decoration: none; color: #821122; }
 
@@ -26,12 +29,13 @@ h1 {
 h2 {
    font-size:2.7em;
    font-weight: lighter;
-   line-height: 115%;
+   line-height: 60%;
 }
 
 h3 {
    font-size:1.5em;
    color: #696969; 
+   line-height: 60%;
 }
 
 h4 {
@@ -87,7 +91,6 @@ a, a:visited {
 .parset .ribbon path { stroke-opacity: 0; fill-opacity: .5; }
 .parset .ribbon path.active { fill-opacity: .9; }
 .parset .ribbon-mouse path { fill-opacity: 0; }
-
 
 .parset .category-0 { fill: #ab3d3f; stroke: #ab3d3f; }
 .parset .category-1 { fill: #666699; stroke: #666699; }
