@@ -5,12 +5,12 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 
 #cite {
-    font-size: 7.5px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 8px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
-    font-size: 9px; color: #9B9B9B; 
+    font-size: 10.5px; color: #9B9B9B; 
     margin-top:8px; 
     background-color: #F6F6F6;
     padding: 8px;
@@ -27,15 +27,15 @@ h1 {
 }
 
 h2 {
-   font-size:2.7em;
+   font-size:2.5em;
    font-weight: lighter;
-   line-height: 60%;
+   line-height: 80%;
 }
 
 h3 {
    font-size:1.5em;
    color: #696969; 
-   line-height: 60%;
+   line-height: 80%;
 }
 
 h4 {
@@ -68,11 +68,11 @@ blockquote {
 }
 
 body {
-	max-width:100%;
+  max-width:100%;
 }
 
 a, a:visited {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .parset .dimension { cursor: ns-resize; }
@@ -108,5 +108,5 @@ a, a:visited {
   background-color: rgba(242, 242, 242, .6);
   position: absolute;
   padding: 3px;
-  font-size:1.1em;
+  font-size:1.2em;
 }
