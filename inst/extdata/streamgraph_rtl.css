@@ -1,0 +1,99 @@
+.axis path, .axis line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 0px;
+  shape-rendering: crispEdges;
+}
+
+svg text {
+  font: 10px 'Open Sans', sans-serif;
+}
+
+select, option, label {
+  font: 12px 'Open Sans', sans-serif;
+}
+
+.tooltip {
+  font-size: 1.3em;
+  color: white;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, .descr, td {
+   font-family: 'Open Sans', sans-serif;
+   background-color: white;
+   font-size: 0.6em;
+}
+
+#cite {
+
+    font-size: 8px; color: #B8B8B8; text-align: left; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+}
+#cite a { text-decoration: none; color: #821122; }
+
+#footer {
+    font-size: 10.5px; color: #9B9B9B;
+    margin-top:8px;
+    background-color: #F6F6F6;
+    padding: 8px;
+}
+#footer a { text-decoration: none; color: #821122; }
+
+
+.descr {
+  font-size: 1.2em;
+  color: #707070;
+}
+
+h1 {
+   font-size:3.3em;
+}
+
+h2 {
+   font-size:2.5em;
+   font-weight: lighter;
+   line-height: 80%;
+}
+
+h3 {
+   font-size:1.5em;
+   color: #696969;
+   line-height: 80%;
+}
+
+h4 {
+   font-size:1.5em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+td, th {
+  border: none;
+  font-size:0.95em;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+body {
+  max-width:100%;
+}
+
+a, a:visited {
+  text-decoration: underline;
+}
