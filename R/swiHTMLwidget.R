@@ -70,7 +70,17 @@ swi_widget <- function(
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "d3.parsets.css", full.names = T),
       to = original, overwrite = T)
+   
+     # copy the RTL files, the .js and .css files !
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      "d3.parsets_rtl.css", full.names = T),
+      to = dirname(original), overwrite = T) 
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      "d3.parsets_rtl.min.js", full.names = T),
+      to = dirname(original), overwrite = T) 
+  
   }
+  
   ## For streamgraphR: overwrite the javascript code and its css file
   # modified streamgraph.js where the select dropdown has no text by default!
   original <- list.files("js", "streamgraph.js", full.names = T, recursive = T)
@@ -78,11 +88,19 @@ swi_widget <- function(
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
     "streamgraph.js", full.names = T),
     to = original, overwrite = T)
+    
+    # copy the RTL variant
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      "streamgraph_rtl.js", full.names = T),
+       to = dirname(original), overwrite = T)
   }
   original <- list.files("js", "streamgraph.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-    "streamgraph.css", full.names = T),
-    to = original, overwrite = T)
+    "streamgraph.css", full.names = T), to = original, overwrite = T)
+    
+    # copy the RTL variant
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      "streamgraph_rtl.css", full.names = T), to = dirname(original), overwrite = T)
   }
 }
