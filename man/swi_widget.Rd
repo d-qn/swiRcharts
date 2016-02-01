@@ -5,9 +5,8 @@
 \title{Helper functions for htmlwidget}
 \usage{
 swi_widget(widget.html, output.html = "parset_swi.html", output = ".",
-  source = "source:", author = "Duc-Quang Nguyen | swissinfo.ch",
-  h2 = "title", descr = "descriptive text", h3 = "subtitle",
-  footer = "")
+  source = "source:", author = " swissinfo.ch", h2 = "title",
+  descr = "descriptive text", h3 = "subtitle", footer = "")
 }
 \arguments{
 \item{widget.html, output.html}{character file path to the input widget html and the output reponsive html}
