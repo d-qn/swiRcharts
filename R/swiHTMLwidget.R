@@ -115,5 +115,15 @@ swi_widget <- function(
       to = dirname(original), overwrite = T) 
   }
   
+  ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js" 
+  ## (to not set the font family via d3.js and to not have "total" in the arc tooltip) in the javacript folder
+  original <- list.files("js", "chorddiag.css", full.names = T, recursive = T)  
+  if(!identical(original, character(0))) {
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      'chorddiag.css', full.names = T), to = original, overwrite = T)
+    
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+       "chorddiag.js", full.names = T), to = dirname(original), overwrite = T) 
+  }
   
 }

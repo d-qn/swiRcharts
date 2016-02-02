@@ -133,8 +133,8 @@ HTMLWidgets.widget({
       }
 
       var countString = [
-          '<span style = "font-size:.7em">',
-          d3.format("1.2s")(d.value) + ' of ' + d3.format("1.2s")(totalSize),
+          '<span style = "font-size:.6em">',
+          d3.format("1.2")(d.value) + ' / ' + d3.format("1.2s")(totalSize),
           '</span>'
         ].join('')
 
