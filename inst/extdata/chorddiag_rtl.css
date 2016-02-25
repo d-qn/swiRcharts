@@ -1,15 +1,18 @@
 body, h1, h2, h3, h4, h5, h6, .descr, td {
+
    font-family: 'Open Sans', sans-serif;
    background-color: white;
-   font-size: 0.6em;
+   font-size: 0.65em;
 }
 
 #cite {
+    direction: rtl;    
     font-size: 8px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
+    direction: rtl;    
     font-size: 10.5px; color: #9B9B9B; 
     margin-top:8px; 
     background-color: #F6F6F6;
@@ -19,22 +22,26 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
+ direction: rtl;    
  font-size: 1.2em; 
  color: #707070;
  line-height: 120%;
 }
      
 h1 {
+      direction: rtl;        
    font-size:3.3em;
 }
 
 h2 {
+       direction: rtl;    
    font-size:2.2em;
    font-weight: lighter;
     line-height: 100%;
 }
 
 h3 {
+       direction: rtl;    
    font-size:1.5em;
    color: #696969; 
    line-height: 80%;
@@ -81,6 +88,7 @@ a, a:visited {
 
 
 .d3-tip {
+  direction: rtl;    
   line-height: 1;
   /*font-weight: bold;*/
   padding: 12px;

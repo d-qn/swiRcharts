@@ -121,6 +121,8 @@ swi_widget <- function(
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       'chorddiag.css', full.names = T), to = original, overwrite = T)
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+      'chorddiag_rtl.css', full.names = T), to = dirname(original), overwrite = T)
     
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
        "chorddiag.js", full.names = T), to = dirname(original), overwrite = T) 
