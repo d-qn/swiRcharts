@@ -2,7 +2,7 @@
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans', sans-serif;
    background-color: white;
-   font-size: 0.9em;
+   font-size: 0.8em;
 }
 
 #cite {
@@ -18,11 +18,19 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 #footer a { text-decoration: none; color: #821122; }
 
+.
+
 .descr {
  font-size: 1.2em;
  color: #707070;
  line-height: 120%;
 }
+
+.light {
+ font-size: 0.9em;
+ color: #707070;
+}
+
 
 h1 {
    font-size:3.3em;
@@ -31,7 +39,7 @@ h1 {
 h2 {
    font-size:2.2em;
    font-weight: lighter;
-    line-height: 100%;
+   line-height: 100%;
 }
 
 h3 {
