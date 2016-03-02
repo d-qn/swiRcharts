@@ -11,11 +11,11 @@
 ##' }
 swi_widget <- function(
   widget.html,
-  output.html = "parset_swi.html", 
+  output.html = "parset_swi.html",
   output = ".",
   source = "source:",
-  author = " swissinfo.ch", 
-  h2 = "title", 
+  author = " swissinfo.ch",
+  h2 = "title",
   descr = "descriptive text",
   h3 = "subtitle",
   footer = "")  {
@@ -29,11 +29,16 @@ swi_widget <- function(
 
   # check input html and library
   if(!file.exists(widget.html)) { stop("\n", widget.html, " does not exist!")}
-    
+
   ## Load widget.html and get everything between the tag <div rChart highcharts> until the last <script>
   x <- readLines(widget.html)
   istart <- grep("htmlwidget_container", x)
   iend <- max(grep("</script>", x))
+  # hack for metricgraphics, it creates directly html code to be saved with save_html instead of htmlwidget::savewidget!
+  if(identical(istart, integer(0))) {
+    istart <- grep("<table style", x)
+    iend <-  grep("</table>", x, fixed = T)
+  }
 
   # append javacript code to output.html
   sink(output.html, append = T)
@@ -55,11 +60,11 @@ swi_widget <- function(
 
   # add the footer: source & author
   cat('\n\n<!-- Source -->\n<div id="cite">', source, "|", author, "</div>")
-  
+
   if(footer != "") {
     cat('\n<!-- Footer -->\n<div id="footer">', footer, "</div>")
   }
-  
+
   cat("\n\n\n</body>\n</html>")
 
   sink()
@@ -70,17 +75,17 @@ swi_widget <- function(
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "d3.parsets.css", full.names = T),
       to = original, overwrite = T)
-   
+
      # copy the RTL files, the .js and .css files !
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "d3.parsets_rtl.css", full.names = T),
-      to = dirname(original), overwrite = T) 
+      to = dirname(original), overwrite = T)
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "d3.parsets_rtl.min.js", full.names = T),
-      to = dirname(original), overwrite = T) 
-  
+      to = dirname(original), overwrite = T)
+
   }
-  
+
   ## For streamgraphR: overwrite the javascript code and its css file
   # modified streamgraph.js where the select dropdown has no text by default!
   original <- list.files("js", "streamgraph.js", full.names = T, recursive = T)
@@ -88,7 +93,7 @@ swi_widget <- function(
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
     "streamgraph.js", full.names = T),
     to = original, overwrite = T)
-    
+
     # copy the RTL variant
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "streamgraph_rtl.js", full.names = T),
@@ -98,34 +103,43 @@ swi_widget <- function(
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
     "streamgraph.css", full.names = T), to = original, overwrite = T)
-    
+
     # copy the RTL variant
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "streamgraph_rtl.css", full.names = T), to = dirname(original), overwrite = T)
   }
-  
+
   ## For sunburstR: overwrite its CSS "sequences.css" and sunburst.js in the javacript folder
   original <- list.files("js", "sequences.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
         'sequences.css', full.names = T), to = original, overwrite = T)
-    
+
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "sunburst.js", full.names = T),
-      to = dirname(original), overwrite = T) 
+      to = dirname(original), overwrite = T)
   }
-  
-  ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js" 
+
+  ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js"
   ## (to not set the font family via d3.js and to not have "total" in the arc tooltip) in the javacript folder
-  original <- list.files("js", "chorddiag.css", full.names = T, recursive = T)  
+  original <- list.files("js", "chorddiag.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       'chorddiag.css', full.names = T), to = original, overwrite = T)
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       'chorddiag_rtl.css', full.names = T), to = dirname(original), overwrite = T)
-    
+
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-       "chorddiag.js", full.names = T), to = dirname(original), overwrite = T) 
+       "chorddiag.js", full.names = T), to = dirname(original), overwrite = T)
   }
-  
+
+  ## For metricgraphics.js: overwrite its CSS "metricgraphics.css"
+  original <- list.files("js", "metricgraphics.css", full.names = T, recursive = T)
+  if(!identical(original, character(0))) {
+    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+    'metricgraphics.css', full.names = T), to = original, overwrite = T)
+    # file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+    # 'metricgraphics_rtl.css', full.names = T), to = dirname(original), overwrite = T)
+  }
+
 }
