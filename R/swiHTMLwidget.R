@@ -34,11 +34,6 @@ swi_widget <- function(
   x <- readLines(widget.html)
   istart <- grep("htmlwidget_container", x)
   iend <- max(grep("</script>", x))
-  # hack for metricgraphics, it creates directly html code to be saved with save_html instead of htmlwidget::savewidget!
-  if(identical(istart, integer(0))) {
-    istart <- grep("<table style", x)
-    iend <-  grep("</table>", x, fixed = T)
-  }
 
   # append javacript code to output.html
   sink(output.html, append = T)
@@ -131,15 +126,6 @@ swi_widget <- function(
 
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
        "chorddiag.js", full.names = T), to = dirname(original), overwrite = T)
-  }
-
-  ## For metricgraphics.js: overwrite its CSS "metricgraphics.css"
-  original <- list.files("js", "metricgraphics.css", full.names = T, recursive = T)
-  if(!identical(original, character(0))) {
-    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-    'metricgraphics.css', full.names = T), to = original, overwrite = T)
-    # file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-    # 'metricgraphics_rtl.css', full.names = T), to = dirname(original), overwrite = T)
   }
 
 }

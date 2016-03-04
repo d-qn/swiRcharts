@@ -84,7 +84,7 @@ a, a:visited {
 
 .mg-active-datapoint {
     fill: black;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
     opacity: 0.8;
 }
@@ -153,7 +153,7 @@ a, a:visited {
 .mg-header .mg-chart-description {
     fill: #ccc;
     font-family: FontAwesome;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .mg-points circle {
@@ -161,7 +161,8 @@ a, a:visited {
 }
 
 .mg-popover {
-    font-size: 0.95rem;
+    font-size: 0.6rem;
+    color: #696969;
 }
 
 .mg-popover-content {
