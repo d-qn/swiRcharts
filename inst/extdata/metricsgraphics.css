@@ -1,7 +1,5 @@
 body, h1, h2, h3, h4, h5, h6, .descr, td {
-   font-family: 'Open Sans', sans-serif;
-   background-color: white;
-   font-size: 0.6em;
+   font-family: 'Open Sans', sans-serif!important;
 }
 
 #cite {
@@ -19,21 +17,22 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
- font-size: 1.2em; color: #707070;
+  font-size: 1.1em; 
+  color: #707070;
 }
      
 h1 {
-   font-size:3.3em;
+   font-size:3em;
 }
 
 h2 {
-   font-size:2.5em;
-   font-weight: lighter;
+   font-size:2em;
+   font-weight: lighter !important;
    line-height: 80%;
 }
 
 h3 {
-   font-size:1.5em;
+   font-size:1.5em !important;
    color: #696969; 
    line-height: 80%;
 }
@@ -161,7 +160,7 @@ a, a:visited {
 }
 
 .mg-popover {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     color: #696969;
 }
 
@@ -409,14 +408,14 @@ circle.mg-points-mono {
 .mg-y-axis text,
 .mg-histogram .axis text {
     fill: black;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     opacity: 0.6;
 }
 
 .mg-x-axis .label,
 .mg-y-axis .label,
 .mg-axis .label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 400;
 }
