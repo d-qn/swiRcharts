@@ -3,13 +3,13 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 
 #cite {
-    font-size: 0.7rem; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 0.8rem; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
-    font-size: 10.5px; color: #9B9B9B; 
-    margin-top:8px; 
+    font-size: 10.5px; color: #9B9B9B;
+    margin-top:8px;
     background-color: #F6F6F6;
     padding: 8px;
 }
@@ -17,10 +17,10 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   color: #707070;
 }
-     
+
 h1 {
    font-size:3em;
 }
@@ -33,7 +33,7 @@ h2 {
 
 h3 {
    font-size:1.5em !important;
-   color: #696969; 
+   color: #696969;
    line-height: 80%;
 }
 
@@ -48,7 +48,7 @@ h5 {
 h6 {
    font-size:0.8em;
 }
-    
+
 
 a:visited {
    color: rgb(50%, 0%, 50%);
@@ -142,13 +142,13 @@ a, a:visited {
 
 .mg-header {
     cursor: default;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .mg-header .mg-chart-description {
     fill: #ccc;
     font-family: FontAwesome;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .mg-points circle {

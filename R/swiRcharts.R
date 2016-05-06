@@ -152,7 +152,8 @@ hChart2responsiveHTML <- function(hChart.html, output.html = "rHighchart.html", 
     
   # add the footer: source & author
   cat('\n\n<!-- Source -->\n<div id="cite">', source, "|", author, "</div>")
-  cat("\n\n\n</body>\n</html>")
+  cat('\n<script type="text/javascript" src="https://www.swissinfo.ch/static/Themes/basic/js/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>')
+  cat("\n</body>\n</html>")
   
   sink()
    
