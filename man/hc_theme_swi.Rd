@@ -4,7 +4,7 @@
 \name{hc_theme_swi}
 \alias{hc_theme_swi}
 \title{Highchart(er) SWI theme}
-\format{An object of class \code{hc_theme} of length 7.}
+\format{An object of class \code{hc_theme} of length 8.}
 \usage{
 hc_theme_swi
 }

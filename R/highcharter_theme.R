@@ -15,7 +15,7 @@ hc_theme_swi <- highcharter::hc_theme(
   chart = list(
     backgroundColor = "#FBF8F3",
     style = list (
-      fontFamily = 'Open Sans Condensed Light'
+      fontFamily = 'Open Sans Condensed'
     )
   ),
   title = list(
@@ -23,8 +23,8 @@ hc_theme_swi <- highcharter::hc_theme(
     x = 50, 
     style = list(
       color = '#1a1a1a',
-      fontFamily = "Open Sans Condensed Light",
-      fontSize = "1.8em"
+      fontFamily = "Open Sans Condensed",
+      fontSize = "2em"
     )
   ),
   subtitle = list(
@@ -32,13 +32,14 @@ hc_theme_swi <- highcharter::hc_theme(
     x = 50, 
     style = list(
       color = '#666666',
-      fontFamily = 'Open Sans Condensed Light',
+      fontFamily = 'Open Sans Condensed',
+      fontSize = "1.2em",
       fontWeight = "italic"
     )
   ),
   legend = list(
     itemStyle = list(
-      fontFamily = 'Open Sans Condensed Light',
+      fontFamily = 'Open Sans Condensed',
       color = 'black'
     ),
     itemHoverStyle = list(
@@ -71,6 +72,12 @@ hc_theme_swi <- highcharter::hc_theme(
       style = list (
         fontSize = '1.4em'
       )
+    )
+  ),
+  tooltip = list(
+    style = list (
+      fontFamily = 'Open Sans',
+      fontSize = "0.9em"
     )
   )
 )
