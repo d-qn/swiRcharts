@@ -1,6 +1,9 @@
 ##' Highchart(er) SWI theme
+##' 
+##' Some helpers to get a SWI look for highcharter
 ##'
 ##' @import swiTheme 
+##' @rdname swi_highcharter
 ##' @importFrom highcharter hc_theme
 ##' @export
 ##' @seealso http://jkunst.com/highcharter/themes.html#create-themes
@@ -81,3 +84,13 @@ hc_theme_swi <- highcharter::hc_theme(
     )
   )
 )
+
+
+##' @rdname swi_highcharter
+##' @export
+##' @examples
+##' style_swi_highcharter()
+
+style_swi_highcharter <- function() {
+  list.files(system.file("extdata", package="swiRcharts"), 'stylesHighcharter.html', full.names = T)
+}

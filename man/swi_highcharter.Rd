@@ -3,19 +3,23 @@
 \docType{data}
 \name{hc_theme_swi}
 \alias{hc_theme_swi}
+\alias{style_swi_highcharter}
 \title{Highchart(er) SWI theme}
 \format{An object of class \code{hc_theme} of length 8.}
 \usage{
 hc_theme_swi
+
+style_swi_highcharter()
 }
 \description{
-Highchart(er) SWI theme
+Some helpers to get a SWI look for highcharter
 }
 \examples{
 \dontrun{
 require(highcharter)
 hc_demo() \%>\% hc_add_theme(hc_theme_swi)
 }
+style_swi_highcharter()
 }
 \seealso{
 http://jkunst.com/highcharter/themes.html#create-themes
