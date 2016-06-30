@@ -27,7 +27,7 @@ hc_theme_swi <- highcharter::hc_theme(
     style = list(
       color = '#1a1a1a',
       fontFamily = "Open Sans Condensed",
-      fontSize = "2.6em",
+      fontSize = "2.4em",
       fontWeight = "bold"
     )
   ),
@@ -37,7 +37,7 @@ hc_theme_swi <- highcharter::hc_theme(
     style = list(
       color = '#262626',
       fontFamily = 'Open Sans Condensed',
-      fontSize = "1.65em",
+      fontSize = "1.7em",
       fontWeight = "italic"
     )
   ),
@@ -63,13 +63,13 @@ hc_theme_swi <- highcharter::hc_theme(
       tickColor = "#CEC6B9",
       tickWidth = 1,
       style = list (
-        fontSize = '1.2em',
+        fontSize = '1.3em',
         color = "#333333"
       )
     ),
     title = list(
       style = list (
-        fontSize = '1.9em',
+        fontSize = '2em',
         color = "#333333"
       )
     )
@@ -78,14 +78,14 @@ hc_theme_swi <- highcharter::hc_theme(
     lineColor =  "#CEC6B9",
     labels = list(
       style = list (
-        fontSize = '1.2em',
+        fontSize = '1.3em',
         color = "#333333"
       )
     ),
     title = list(
       margin = 17,
       style = list (
-        fontSize = '1.9em',
+        fontSize = '2em',
         color = "#333333"
       )
     )
@@ -93,7 +93,7 @@ hc_theme_swi <- highcharter::hc_theme(
   tooltip = list(
     style = list (
       fontFamily = 'Open Sans',
-      fontSize = "1em"
+      fontSize = "1.1em"
     )
   )
 )
