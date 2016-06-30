@@ -23,22 +23,21 @@ hc_theme_swi <- highcharter::hc_theme(
   ),
   title = list(
     align = "left",
-    x = 50, 
+    x = 4, 
     style = list(
       color = '#1a1a1a',
       fontFamily = "Open Sans Condensed",
-      fontSize = "2.4em",
+      fontSize = "1.7em",
       fontWeight = "bold"
     )
   ),
   subtitle = list(
     align = "left",
-    x = 50, 
+    x = 4, 
     style = list(
       color = '#262626',
       fontFamily = 'Open Sans Condensed',
-      fontSize = "1.7em",
-      fontWeight = "italic"
+      fontSize = "1.2em"
     )
   ),
   legend = list(
@@ -63,13 +62,13 @@ hc_theme_swi <- highcharter::hc_theme(
       tickColor = "#CEC6B9",
       tickWidth = 1,
       style = list (
-        fontSize = '1.3em',
+        fontSize = '1em',
         color = "#333333"
       )
     ),
     title = list(
       style = list (
-        fontSize = '2em',
+        fontSize = '1.4em',
         color = "#333333"
       )
     )
@@ -78,14 +77,14 @@ hc_theme_swi <- highcharter::hc_theme(
     lineColor =  "#CEC6B9",
     labels = list(
       style = list (
-        fontSize = '1.3em',
+        fontSize = '1em',
         color = "#333333"
       )
     ),
     title = list(
       margin = 17,
       style = list (
-        fontSize = '2em',
+        fontSize = '1.4em',
         color = "#333333"
       )
     )
@@ -93,7 +92,7 @@ hc_theme_swi <- highcharter::hc_theme(
   tooltip = list(
     style = list (
       fontFamily = 'Open Sans',
-      fontSize = "1.1em"
+      fontSize = "1em"
     )
   )
 )
