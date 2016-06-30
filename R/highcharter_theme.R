@@ -16,7 +16,7 @@
 hc_theme_swi <- highcharter::hc_theme(
   colors = swiTheme::swi_rpal,
   chart = list(
-    backgroundColor = "#FBF8F3",
+    backgroundColor = "#f2f2f2",
     style = list (
       fontFamily = 'Open Sans Condensed'
     )
@@ -27,16 +27,17 @@ hc_theme_swi <- highcharter::hc_theme(
     style = list(
       color = '#1a1a1a',
       fontFamily = "Open Sans Condensed",
-      fontSize = "2em"
+      fontSize = "2.6em",
+      fontWeight = "bold"
     )
   ),
   subtitle = list(
     align = "left",
     x = 50, 
     style = list(
-      color = '#666666',
+      color = '#262626',
       fontFamily = 'Open Sans Condensed',
-      fontSize = "1.2em",
+      fontSize = "1.65em",
       fontWeight = "italic"
     )
   ),
@@ -60,27 +61,39 @@ hc_theme_swi <- highcharter::hc_theme(
       y = -2,
       tickLength = 0,
       tickColor = "#CEC6B9",
-      tickWidth = 1
+      tickWidth = 1,
+      style = list (
+        fontSize = '1.2em',
+        color = "#333333"
+      )
     ),
     title = list(
       style = list (
-        fontSize = '1.4em'
+        fontSize = '1.9em',
+        color = "#333333"
       )
     )
   ),
   xAxis = list(
     lineColor =  "#CEC6B9",
+    labels = list(
+      style = list (
+        fontSize = '1.2em',
+        color = "#333333"
+      )
+    ),
     title = list(
       margin = 17,
       style = list (
-        fontSize = '1.4em'
+        fontSize = '1.9em',
+        color = "#333333"
       )
     )
   ),
   tooltip = list(
     style = list (
       fontFamily = 'Open Sans',
-      fontSize = "0.9em"
+      fontSize = "1em"
     )
   )
 )
