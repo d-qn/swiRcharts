@@ -27,7 +27,7 @@ hc_theme_swi <- highcharter::hc_theme(
     style = list(
       color = '#1a1a1a',
       fontFamily = "Open Sans Condensed",
-      fontSize = "1.7em",
+      fontSize = "1.6em",
       fontWeight = "bold"
     )
   ),
