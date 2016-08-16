@@ -1,7 +1,10 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic';
+
 body, h1, h2, h3, h4, h5, h6, .descr, td {
-   font-family: 'Open Sans', sans-serif;
-   background-color: white;
-   font-size: 0.6em;
+   text-rendering: optimizeLegibility;
+   font-smoothing: antialiased;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 18px;
 }
 
 #cite {
@@ -17,6 +20,11 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 #footer a { text-decoration: none; color: #821122; }
 
+#htmlwidget_container {
+    width: 100%;
+    padding-top: 12%;
+    position: relative;
+}
 
 .descr {
  font-size: 1.2em; 
@@ -30,8 +38,8 @@ h1 {
 
 h2 {
    font-size:2.2em;
-   font-weight: lighter;
-    line-height: 100%;
+   font-weight: bolder;
+   line-height: 100%;
 }
 
 h3 {
@@ -76,8 +84,6 @@ body {
 a, a:visited {
   text-decoration: underline;
 }
-
-
 
 
 .d3-tip {
