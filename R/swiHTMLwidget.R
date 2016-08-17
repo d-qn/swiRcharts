@@ -41,20 +41,14 @@ swi_widget <- function(
     file.rename(output.html, gsub("\\.html$", "_init\\.html", output.html))
     warning("\n Existing output html renamed to:", gsub("\\.html$", "_init\\.html", output.html), "\n")
   }
-
-  # check input html and library
-  if(!file.exists(widget.html)) { stop("\n", widget.html, " does not exist!")}
-
-  ## Load widget.html and get everything between the tag <div rChart highcharts> until the last <script>
-  x <- readLines(widget.html)
-  istart <- grep("htmlwidget_container", x)
-  iend <- max(grep("</script>", x))
-
+  ## Load widget.html code and fînd the tag "htmlwidget_container" (istart) until the last <script> (iend)
+  html.code <- grab_widgetHTML(widget.html)
+  
   # append javacript code to output.html
   sink(output.html, append = T)
 
   # write all the code before the widget
-  cat(x[1:(istart-1)])
+  cat( html.code[['html']][1:(html.code[['istart']]-1)])
 
   if(h2 != "") {
     cat("<h2>",h2,"</h2>\n")
@@ -66,7 +60,7 @@ swi_widget <- function(
     cat("<h3>",h3,"</h3>\n")
   }
   # get and sink the div with the widget
-  cat(x[istart:iend])
+  cat(html.code[['html']][html.code[['istart']]:html.code[['iend']]])
 
   # add the footer: source & author
   cat('\n\n<!-- Source -->\n<div id="cite">', source, "|", author, "</div>")
@@ -75,76 +69,23 @@ swi_widget <- function(
     cat('\n<!-- Footer -->\n<div id="footer">', footer, "</div>")
   }
 
-  cat("\n\n\n</body>\n</html>")
-
+  cat("\n</body>\n</html>")
   sink()
   
   swi_libWidget_overwrite(file.path(output, "js"))
-  
-  # ## For parsetR: overwrite the javacsript d3.parset.css file if in the javacript folder
-  # original <- list.files(file.path(output, "js"), "d3.parsets.css", full.names = T, recursive = T)
-  # if(!identical(original, character(0))) {
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "d3.parsets.css", full.names = T),
-  #     to = original, overwrite = T)
-  # 
-  #    # copy the RTL files, the .js and .css files !
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "d3.parsets_rtl.css", full.names = T),
-  #     to = dirname(original), overwrite = T)
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "d3.parsets_rtl.min.js", full.names = T),
-  #     to = dirname(original), overwrite = T)
-  # 
-  # }
-  # 
-  # ## For streamgraphR: overwrite the javascript code and its css file
-  # # modified streamgraph.js where the select dropdown has no text by default!
-  # original <- list.files(file.path(output, "js"), "streamgraph.js", full.names = T, recursive = T)
-  # if(!identical(original, character(0))) {
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #   "streamgraph.js", full.names = T),
-  #   to = original, overwrite = T)
-  # 
-  #   # copy the RTL variant
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "streamgraph_rtl.js", full.names = T),
-  #      to = dirname(original), overwrite = T)
-  # }
-  # original <- list.files(file.path(output, "js"), "streamgraph.css", full.names = T, recursive = T)
-  # if(!identical(original, character(0))) {
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #   "streamgraph.css", full.names = T), to = original, overwrite = T)
-  # 
-  #   # copy the RTL variant
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "streamgraph_rtl.css", full.names = T), to = dirname(original), overwrite = T)
-  # }
-  # 
-  # ## For sunburstR: overwrite its CSS "sequences.css" and sunburst.js in the javacript folder
-  # original <- list.files(file.path(output, "js"), "sequences.css", full.names = T, recursive = T)
-  # if(!identical(original, character(0))) {
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #       'sequences.css', full.names = T), to = original, overwrite = T)
-  # 
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     "sunburst.js", full.names = T),
-  #     to = dirname(original), overwrite = T)
-  # }
-  # 
-  # ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js"
-  # ## (to not set the font family via d3.js and to not have "total" in the arc tooltip) in the javacript folder
-  # original <- list.files(file.path(output, "js"), "chorddiag.css", full.names = T, recursive = T)
-  # if(!identical(original, character(0))) {
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     'chorddiag.css', full.names = T), to = original, overwrite = T)
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #     'chorddiag_rtl.css', full.names = T), to = dirname(original), overwrite = T)
-  # 
-  #   file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-  #      "chorddiag.js", full.names = T), to = dirname(original), overwrite = T)
-  # }
+}
 
+##' @rdname swi_HTMLwidget
+##' @export
+grab_widgetHTML <- function(widget.html) {
+  # check input html and library
+  if(!file.exists(widget.html)) { stop("\n", widget.html, " does not exist!")}
+  
+  ## Load widget.html and get everything between the tag <div rChart highcharts> until the last <script>
+  x <- readLines(widget.html)
+  istart <- grep("htmlwidget_container", x)
+  iend <- max(grep("</script>", x))
+  list(html = x, istart = istart, iend = iend)
 }
 
 ##' @rdname swi_HTMLwidget
