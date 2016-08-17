@@ -7,7 +7,21 @@
 ##' @export
 ##' @examples
 ##' \dontrun{
-##' TO DO !!!!!!
+##' library(swiRcharts)
+##' require(htmlwidgets)
+##' require(parsetR)
+##' 
+##' widget <- parset(HairEyeColor, tension = 0.5)
+##' 
+##' tmp.dir <- tempdir()
+##' widget.tmp.file <- paste0(tmp.dir, "/tmp.html")
+##' widget.swi.file <- "output.html"
+##' saveWidget(widget, file = widget.tmp.file, selfcontained = F, libdir = "js")
+##' swi_widget(widget.tmp.file, widget.swi.file, output=tmp.dir)
+##' 
+##' viewer <- getOption("viewer")
+##' viewer(widget.tmp.file)
+##' viewer(paste0(tmp.dir, "/", widget.swi.file))
 ##' }
 swi_widget <- function(
   widget.html,
@@ -63,9 +77,9 @@ swi_widget <- function(
   cat("\n\n\n</body>\n</html>")
 
   sink()
-
+  
   ## For parsetR: overwrite the javacsript d3.parset.css file if in the javacript folder
-  original <- list.files("js", "d3.parsets.css", full.names = T, recursive = T)
+  original <- list.files(file.path(output, "js"), "d3.parsets.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       "d3.parsets.css", full.names = T),
@@ -83,7 +97,7 @@ swi_widget <- function(
 
   ## For streamgraphR: overwrite the javascript code and its css file
   # modified streamgraph.js where the select dropdown has no text by default!
-  original <- list.files("js", "streamgraph.js", full.names = T, recursive = T)
+  original <- list.files(file.path(output, "js"), "streamgraph.js", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
     "streamgraph.js", full.names = T),
@@ -94,7 +108,7 @@ swi_widget <- function(
       "streamgraph_rtl.js", full.names = T),
        to = dirname(original), overwrite = T)
   }
-  original <- list.files("js", "streamgraph.css", full.names = T, recursive = T)
+  original <- list.files(file.path(output, "js"), "streamgraph.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
     "streamgraph.css", full.names = T), to = original, overwrite = T)
@@ -105,7 +119,7 @@ swi_widget <- function(
   }
 
   ## For sunburstR: overwrite its CSS "sequences.css" and sunburst.js in the javacript folder
-  original <- list.files("js", "sequences.css", full.names = T, recursive = T)
+  original <- list.files(file.path(output, "js"), "sequences.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
         'sequences.css', full.names = T), to = original, overwrite = T)
@@ -117,7 +131,7 @@ swi_widget <- function(
 
   ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js"
   ## (to not set the font family via d3.js and to not have "total" in the arc tooltip) in the javacript folder
-  original <- list.files("js", "chorddiag.css", full.names = T, recursive = T)
+  original <- list.files(file.path(output, "js"), "chorddiag.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       'chorddiag.css', full.names = T), to = original, overwrite = T)

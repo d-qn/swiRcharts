@@ -20,7 +20,21 @@ Helper functions to create a container for htmlwidget with javascript library fi
 }
 \examples{
 \dontrun{
-TO DO !!!!!!
+library(swiRcharts)
+require(htmlwidgets)
+require(parsetR)
+
+widget <- parset(HairEyeColor, tension = 0.5)
+
+tmp.dir <- tempdir()
+widget.tmp.file <- paste0(tmp.dir, "/tmp.html")
+widget.swi.file <- "output.html"
+saveWidget(widget, file = widget.tmp.file, selfcontained = F, libdir = "js")
+swi_widget(widget.tmp.file, widget.swi.file, output=tmp.dir)
+
+viewer <- getOption("viewer")
+viewer(widget.tmp.file)
+viewer(paste0(tmp.dir, "/", widget.swi.file))
 }
 }
 
