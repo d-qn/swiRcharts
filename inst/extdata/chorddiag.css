@@ -8,7 +8,15 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 }
 
 #cite {
-    font-size: 8px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    position: fixed;
+    bottom:0;
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: #4d4d4d;
+    text-align: right;
+    margin-bottom:0.2%;
+    margin-left:0.5%;
+    margin-right:10px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
