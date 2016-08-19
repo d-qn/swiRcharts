@@ -1,5 +1,5 @@
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,800italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans Condensed', sans-serif;
@@ -22,7 +22,7 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #707070;
 }
 
@@ -32,8 +32,8 @@ h1 {
 
 h2 {
    font-family: 'Open Sans Condensed', sans-serif  !important;
-   font-size:1.4rem;
-   font-weight: 600 !important;
+   font-size:1.3rem;
+   font-weight: 700 !important;
    line-height: 80%;
 }
 
@@ -46,15 +46,6 @@ h3 {
 h4 {
    font-size:1.5em;
 }
-
-h5 {
-   font-size:0.9em;
-}
-
-h6 {
-   font-size:0.8em;
-}
-
 
 a:visited {
    color: rgb(50%, 0%, 50%);
@@ -74,6 +65,9 @@ blockquote {
 
 body {
   max-width:100%;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300 !important;
+  margin-right: 4px !important;
 }
 
 a, a:visited {
@@ -83,10 +77,14 @@ a, a:visited {
 
 /*  ### METRICGRAPHICS ### */
 
+
+
+/*  --------------------------- tooltip! -----------------  */
 .mg-active-datapoint {
     fill: black;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
     opacity: 0.9;
 }
 
@@ -403,23 +401,24 @@ circle.mg-points-mono {
     opacity: 1;
     shape-rendering: auto;
     stroke: #b3b2b2;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
 }
 
 .mg-x-axis text,
 .mg-y-axis text,
 .mg-histogram .axis text {
     fill: black;
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     opacity: 0.6;
 }
 
+/* ---------------  Changes for small multiples, large axis names             -------------------*/
 .mg-x-axis .label,
 .mg-y-axis .label,
 .mg-axis .label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    font-weight: 400;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .mg-x-axis-small text,
@@ -430,7 +429,7 @@ circle.mg-points-mono {
 
 .mg-x-axis-small .label,
 .mg-y-axis-small .label {
-    font-size: 0.65rem;
+    font-size: 0.9rem;
 }
 
 .mg-european-hours {
