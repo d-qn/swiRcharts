@@ -144,7 +144,7 @@ HTMLWidgets.widget({
 
       d3.select(el).selectAll(".sunburst-explanation")
           .style("visibility", "")
-          .style("top",((+circleBound.height - 50)/2) + "px")
+          .style("top",((+circleBound.height - 10)/2) + "px")
           .style("width",svgBound.width + "px")
           .html(explanationString);
 
