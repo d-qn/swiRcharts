@@ -25,7 +25,7 @@ HTMLWidgets.widget({
       var chart = instance.chart;
 
       // Dimensions of sunburst
-      var width = el.getBoundingClientRect().width;
+      var width = el.getBoundingClientRect().width -10 ;
       var height = el.getBoundingClientRect().height - 70;
       var radius = Math.min(width, height) / 2;
 
