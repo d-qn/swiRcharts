@@ -25,7 +25,7 @@ HTMLWidgets.widget({
       var chart = instance.chart;
 
       // Dimensions of sunburst
-      var width = el.getBoundingClientRect().width - (x.options.legend.w ? x.options.legend.w : 75);
+      var width = el.getBoundingClientRect().width;
       var height = el.getBoundingClientRect().height - 70;
       var radius = Math.min(width, height) / 2;
 
@@ -153,9 +153,6 @@ HTMLWidgets.widget({
         // Get total size of the tree = value of root node from partition.
         totalSize = path.node().__data__.value;
 
-        drawLegend();
-        d3.select(el).select(".sunburst-togglelegend").on("click", toggleLegend);
-
        }
 
       // Fade all but the current sequence, and show it in the breadcrumb trail.
@@ -186,7 +183,6 @@ HTMLWidgets.widget({
         if(x.options.explanation !== null){
           explanationString = x.options.explanation.bind(totalSize)(d);
         }
-
 
         d3.select(el).selectAll(".sunburst-explanation")
             .style("visibility", "")
@@ -409,72 +405,6 @@ HTMLWidgets.widget({
 
       }
 
-      function drawLegend() {
-
-        // Dimensions of legend item: width, height, spacing, radius of rounded rect.
-        var li = {
-          w: 75, h: 30, s: 3, r: 3
-        };
-
-        //  if legend is provided in the option, we will overwrite
-        //   with what is provided
-        Object.keys(x.options.legend).map(function(ky){
-          li[ky] = x.options.legend[ky];
-        });
-
-        // remove if already drawn
-        d3.select(el).select(".sunburst-legend svg").remove();
-
-        var legend = d3.select(el).select(".sunburst-legend").append("svg")
-            .attr("width", li.w)
-            .attr("height", colors.domain().length * (li.h + li.s));
-
-        var g = legend.selectAll("g")
-            .data( function(){
-              if(x.options.legendOrder !== null){
-                return x.options.legendOrder;
-              } else {
-                // get sorted by top level
-                sortedname = d3.set(Object.keys(d3.nest().key(function(d){return d.name}).rollup(function(d){return d[0].value}).map(json.children) ))
-                // add any other missing
-                colors.domain()
-                  .filter(function(d){
-                    return d !== json.name;
-                  })
-                  .forEach(function(d){
-                    sortedname.add(d)
-                  })
-                return sortedname.values();
-              }
-            })
-            .enter().append("g")
-            .attr("transform", function(d, i) {
-                    return "translate(0," + i * (li.h + li.s) + ")";
-                 });
-
-        g.append("rect")
-            .attr("rx", li.r)
-            .attr("ry", li.r)
-            .attr("width", li.w)
-            .attr("height", li.h)
-            .style("fill", function(d) { return colors(d); });
-
-        g.append("text")
-            .attr("x", li.w / 2)
-            .attr("y", li.h / 2)
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "middle")
-            .text(function(d) { return d; });
-      }
-
-      function toggleLegend() {
-        var legend = d3.select(el).select(".sunburst-legend")
-        if (legend.style("visibility") == "hidden") {
-          legend.style("visibility", "");
-        } else {
-          legend.style("visibility", "hidden");
-        }
-      }
     };
 
     // Take a 2-column CSV and transform it into a hierarchical structure suitable
