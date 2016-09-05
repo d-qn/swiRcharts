@@ -1,54 +1,40 @@
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext" rel="stylesheet">
 
 <style>
 /*  #######   header and footer styling   ########*/
 
-body, h1, h2, h3, h4, h5, h6, .descr {
+body, h1, h2, h3, h4, h5, h6, .descr, #cite {
    text-rendering: optimizeLegibility;
    font-smoothing: antialiased;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 12px;
-   margin:4px 4px 4px 5px;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 16px;
+   margin:1px 1px 1px 1px;
 }
-
-/* ensure data labels are not visible over the tooltip:
-http://stackoverflow.com/questions/15130311/highcharts-labels-visible-over-tooltip */
-/*label {
-  z-index: 1 !important;
-}
-
-.highcharts-tooltip span {
-  background-color:white;
-  opacity:1;
-  z-index:9999 !important;
-  border-radius: 3px;
-
-}
-
-.tooltip {
-  padding:2px;
-}
-*/
-
 
 #cite {
-    font-size: 0.9em; color: #737373; text-align: right; margin-top:2px; margin-right:10px; padding-bottom: 3px;
+    font-size: 0.7em;
+    color: #737373;
+    text-align: right;
+    margin-top:2px;
+    margin-right:10px;
+    padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 .descr {
- font-size: 1.2em;
- color: #9b4b4c;
+ font-size: 1em;
+ color: #707070;
 }
-    
+
 h1 {
    font-size:2em;
 }
 
 h2 {
-   font-size:2.4em;
-   font-weight: lighter;
+   font-size:1.5em;
+   font-weight: bolder;
+   color: #404040;
    line-height: 95%;
 }
 
@@ -75,7 +61,6 @@ a:visited {
 
 
 body {
-      font-size:8pt;
       max-width:100%;
    }
 

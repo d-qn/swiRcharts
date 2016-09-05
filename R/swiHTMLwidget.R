@@ -133,8 +133,8 @@ swi_libWidget_overwrite <- function(dirPath = ".") {
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
       'sequences.css', full.names = T), to = original, overwrite = T)
     
-    file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-      "sunburst.js", full.names = T), to = dirname(original), overwrite = T)
+    # file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
+    #   "sunburst.js", full.names = T), to = dirname(original), overwrite = T)
   }
   
   ## For chord diagram: overwrite its CSS "chorddiag.css" and its js "chorddiag.js"
