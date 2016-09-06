@@ -74,6 +74,7 @@ blockquote {
 
 body {
   max-width:100%;
+  margin:1px 1px 0px 1px;
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300 !important;
 }
