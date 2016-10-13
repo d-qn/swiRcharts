@@ -43,7 +43,7 @@ hc_theme_swi <- highcharter::hc_theme(
   legend = list(
     itemStyle = list(
       fontFamily = 'Open Sans Condensed',
-      fontSize = "1.1em",
+      fontSize = "1em",
       color = 'black'
     ),
     itemHoverStyle = list(
