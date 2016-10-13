@@ -43,6 +43,7 @@ hc_theme_swi <- highcharter::hc_theme(
   legend = list(
     itemStyle = list(
       fontFamily = 'Open Sans Condensed',
+      fontSize = "1.1em",
       color = 'black'
     ),
     itemHoverStyle = list(
@@ -68,7 +69,7 @@ hc_theme_swi <- highcharter::hc_theme(
     ),
     title = list(
       style = list (
-        fontSize = '1.4em',
+        fontSize = '1.5em',
         color = "#333333"
       )
     )
@@ -84,15 +85,17 @@ hc_theme_swi <- highcharter::hc_theme(
     title = list(
       margin = 17,
       style = list (
-        fontSize = '1.4em',
+        fontSize = '1.5em',
         color = "#333333"
       )
     )
   ),
   tooltip = list(
+    borderRadius = 10,
+    padding = 3,
     style = list (
-      fontFamily = 'Open Sans',
-      fontSize = "1em"
+      fontFamily = 'Open Sans Condensed',
+      fontSize = "0.8em"
     )
   )
 )

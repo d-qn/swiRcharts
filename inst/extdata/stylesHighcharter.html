@@ -8,7 +8,7 @@ body, h1, h2, h3, h4, h5, h6, .descr, #cite {
    text-rendering: optimizeLegibility;
    font-smoothing: antialiased;
    font-family: 'Open Sans Condensed', sans-serif;
-   font-size: 17px;
+   font-size: 18px;
    margin:1px 17px 2px 3px;
 }
 
@@ -22,6 +22,14 @@ body, h1, h2, h3, h4, h5, h6, .descr, #cite {
 }
 #cite a { text-decoration: none; color: #821122; }
 
+.footer {
+  font-size: 0.95em;
+  color: #808080;
+  margin-left:0.7%;
+  margin-bottom:8px;
+  max-width:96%;
+}
+
 .graphic{
   max-width:100%;    
 }    
@@ -30,6 +38,10 @@ body, h1, h2, h3, h4, h5, h6, .descr, #cite {
  font-size: 1.1em;
  font-weight: lighter;
  color: #707070;
+}
+
+.tp {
+  font-size: 0.7em;
 }
 
 h1 {
@@ -64,14 +76,18 @@ a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-
 body {
-      max-width:100%;
-   }
+  max-width:100%;
+}
 
-   a, a:visited {
-      text-decoration: underline;
-   }
+a, a:visited {
+    text-decoration: underline;
+}
+   
+@media only screen and (max-width: 600px) {
+    body {
+           font-size: 13px;
+    }
 }
 
 </style>
