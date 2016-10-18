@@ -10,13 +10,14 @@
 ##' @examples
 ##' \dontrun{
 ##' require(highcharter)
-##' hc_demo() %>% hc_add_theme(hc_theme_swi)
+##' data(diamonds, mpg, package = "ggplot2")
+##' hchart(mpg, "scatter", x = displ, y = hwy, group = class) %>% hc_add_theme(hc_theme_swi)
 ##' }
 
 hc_theme_swi <- highcharter::hc_theme(
   colors = swiTheme::swi_rpal,
   chart = list(
-    backgroundColor = "#f2f2f2",
+   # backgroundColor = "#f2f2f2",
     style = list (
       fontFamily = 'Open Sans Condensed'
     )
@@ -44,7 +45,8 @@ hc_theme_swi <- highcharter::hc_theme(
     itemStyle = list(
       fontFamily = 'Open Sans Condensed',
       fontSize = "1em",
-      color = 'black'
+      color = 'black',
+      fontWeight = 300
     ),
     itemHoverStyle = list(
       color = 'gray'

@@ -17,7 +17,8 @@ Some helpers to get a SWI look for highcharter
 \examples{
 \dontrun{
 require(highcharter)
-hc_demo() \%>\% hc_add_theme(hc_theme_swi)
+data(diamonds, mpg, package = "ggplot2")
+hchart(mpg, "scatter", x = displ, y = hwy, group = class) \%>\% hc_add_theme(hc_theme_swi)
 }
 style_swi_highcharter()
 }
