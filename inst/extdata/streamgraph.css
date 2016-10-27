@@ -14,15 +14,16 @@ select, option, label {
 }
 
 .tooltip {	
-  font-size: 1.3em;
-  color: white;	
+  font-size: 1em;
+  font-weight: bolder;
+  fill: #595959;	
 }
 
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans Condensed', sans-serif;
    background-color: white;
-   font-size: 16px;
+   font-size: 17px;
 }
 
 #cite {
@@ -49,9 +50,9 @@ h1 {
 }
 
 h2 {
-   font-size:1.5em;
+   font-size:1.4em;
    font-weight: bolder;
-   line-height: 80%;
+   line-height: 102%;
 }
 
 h3 {
