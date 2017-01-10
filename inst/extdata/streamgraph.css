@@ -41,8 +41,10 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
-  font-size: 1.1em; 
-  color: #707070;
+    font-size: 1.1em; 
+    color: #707070;
+    line-height: 120%;
+    margin-left:2px;
 }
      
 h1 {
@@ -50,15 +52,21 @@ h1 {
 }
 
 h2 {
-   font-size:1.4em;
+   font-size:1.37em;
    font-weight: bolder;
-   line-height: 102%;
+   line-height: 101%;
+   margin-bottom:3px;
+   margin-top:3px;
+   margin-left:2px;
 }
 
 h3 {
-   font-size:1.2em;
-   color: #696969; 
-   line-height: 80%;
+   font-size:1.1em;
+   color: #595959;
+   font-weight: bolder;
+   line-height: 100%;
+   margin-left:2px;
+   margin-top:7px;
 }
 
 h4 {
