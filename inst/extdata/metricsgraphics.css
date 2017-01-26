@@ -77,7 +77,16 @@ a, a:visited {
 
 /*  ### METRICGRAPHICS ### */
 
-
+/* No gutter class for bootstrap https://julienmelissas.com/no-gutter-column-trick-for-bootstrap /*/
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
 
 /*  --------------------------- tooltip! -----------------  */
 .mg-active-datapoint {
