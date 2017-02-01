@@ -43,7 +43,7 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
-    font-size: 1.1em; 
+    font-size: 1.05em; 
     color: #707070;
     line-height: 140%;
     margin-left:5px;
@@ -56,7 +56,7 @@ h1 {
 }
 
 h2 {
-   font-size:1.37em;
+   font-size:1.45em;
    font-weight: bolder;
    line-height: 101%;
    margin-bottom:8px;
