@@ -6,24 +6,24 @@
 }
 
 svg text {
-  font: 0.9em 'Open Sans Condensed', sans-serif;
+  font: 0.95em 'Open Sans Condensed', sans-serif;
 }
 
 select, option, label {
-  font: 0.9em 'Open Sans Condensed', sans-serif;
+  font: 0.95em 'Open Sans Condensed', sans-serif;
 }
 
 .tooltip {	
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bolder;
-  fill: #595959;	
+  fill: #2F343B;	
 }
 
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans Condensed', sans-serif;
    background-color: white;
-   font-size: 17px;
+   font-size: 18px;
 }
 
 #cite {
@@ -112,6 +112,6 @@ a, a:visited {
 
 @media only screen and (max-width: 600px) {
     body {
-           font-size: 14px;
+           font-size: 16px;
     }
 }
