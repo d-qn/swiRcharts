@@ -6,7 +6,7 @@
 }
 
 svg text {
-  font: 0.95em 'Open Sans Condensed', sans-serif;
+  font: 0.9em 'Open Sans Condensed', sans-serif;
 }
 
 select, option, label {
@@ -122,6 +122,6 @@ a, a:visited {
         font-size: 15px;
     }
     .descr {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
