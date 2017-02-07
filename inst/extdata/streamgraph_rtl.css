@@ -6,33 +6,37 @@
 }
 
 svg text {
-  font: 10px 'Open Sans', sans-serif;
+  font: 0.85em 'Open Sans Condensed', sans-serif;
 }
 
 select, option, label {
-  font: 12px 'Open Sans', sans-serif;
+  font: 0.95em 'Open Sans Condensed', sans-serif;
 }
 
 .tooltip {
   font-size: 1.3em;
+  fill: #2F343B;
   color: white;
 }
 
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'Open Sans Condensed', sans-serif;
    background-color: white;
-   font-size: 0.6em;
 }
 
 #cite {
-
-    font-size: 8px; color: #B8B8B8; text-align: left; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 0.6em; 
+    color: #B8B8B8; 
+    text-align: left; 
+    margin-top:5px; 
+    margin-right:5px; 
+    padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
-    font-size: 10.5px; color: #9B9B9B;
+    font-size: 0.75em; color: #9B9B9B; 
     margin-top:8px;
     background-color: #F6F6F6;
     padding: 8px;
@@ -41,8 +45,12 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 
 .descr {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #707070;
+  line-height: 140%;
+  margin-left:5px;
+  margin-right:6px;
+  margin-bottom:8px;
 }
 
 h1 {
@@ -50,15 +58,22 @@ h1 {
 }
 
 h2 {
-   font-size:2.5em;
-   font-weight: lighter;
-   line-height: 80%;
+   font-size:1.5em;
+   font-weight: bolder;
+   line-height: 101%;
+   margin-right:5px;
+   margin-bottom:8px;
+   margin-top:5px;
+   margin-left:5px;
 }
 
 h3 {
-   font-size:1.5em;
-   color: #696969;
-   line-height: 80%;
+   font-size:1.1em;
+   color: #595959;
+   font-weight: bolder;
+   line-height: 100%;
+   margin-left:5px;
+   margin-top:7px;
 }
 
 h4 {
@@ -92,8 +107,18 @@ blockquote {
 
 body {
   max-width:100%;
+  font-size: 18px;   
 }
 
 a, a:visited {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+    .descr {
+        font-size: 0.8em;
+    }
 }

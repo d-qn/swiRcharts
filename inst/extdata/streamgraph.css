@@ -6,7 +6,7 @@
 }
 
 svg text {
-  font: 0.9em 'Open Sans Condensed', sans-serif;
+  font: 0.82em 'Open Sans Condensed', sans-serif;
 }
 
 select, option, label {
@@ -14,9 +14,9 @@ select, option, label {
 }
 
 .tooltip {	
-  font-size: 1.2em;
-  font-weight: bolder;
-  fill: #2F343B;	
+  font-size: 1.3em;
+  fill: #2F343B;
+  color: white;
 }
 
 
