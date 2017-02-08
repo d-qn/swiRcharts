@@ -19,6 +19,9 @@ select, option, label {
   color: white;
 }
 
+.container {
+    width: 100%;
+}
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans Condensed', sans-serif;
