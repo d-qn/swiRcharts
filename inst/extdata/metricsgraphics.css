@@ -2,7 +2,7 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,800italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 body, h1, h2, h3, h4, h5, h6, .descr, td {
-   font-family: 'Open Sans Condensed', sans-serif;
+   font-family: 'Open Sans Condensed', sans-serif !important;
    text-rendering: optimizeLegibility;
    font-smoothing: antialiased;
 }
@@ -65,9 +65,8 @@ blockquote {
 
 body {
   max-width:100%;
-  font-family: 'Open Sans', sans-serif !important;
+  margin:1px 1px 0px 1px;
   font-weight: 300 !important;
-  margin-right: 4px !important;
 }
 
 a, a:visited {
