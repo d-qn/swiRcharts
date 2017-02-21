@@ -1,19 +1,22 @@
-body, h1, h2, h3, h4, h5, h6, .descr, td {
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic';
 
-   font-family: 'Open Sans', sans-serif;
-   background-color: white;
-   font-size: 0.65em;
+body, h1, h2, h3, h4, h5, h6, .descr, td {
+   text-rendering: optimizeLegibility;
+   font-smoothing: antialiased;
+   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #cite {
     direction: rtl;    
-    font-size: 8px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 0.7em;
+    color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
     direction: rtl;    
-    font-size: 10.5px; color: #9B9B9B; 
+    font-size: 0.8em;
+    color: #9B9B9B; 
     margin-top:8px; 
     background-color: #F6F6F6;
     padding: 8px;
@@ -23,9 +26,10 @@ body, h1, h2, h3, h4, h5, h6, .descr, td {
 
 .descr {
  direction: rtl;    
- font-size: 1.2em; 
+ font-size: 1em;
  color: #707070;
  line-height: 120%;
+ margin-right:5px;
 }
      
 h1 {
@@ -34,17 +38,24 @@ h1 {
 }
 
 h2 {
-       direction: rtl;    
-   font-size:2.2em;
-   font-weight: lighter;
-    line-height: 100%;
+    direction: rtl;    
+   font-size:1.4em;
+   font-weight: bolder;
+   line-height: 101%;
+   margin-right:5px;
+   margin-bottom:8px;
+   margin-top:5px;
+   margin-left:2px;
 }
 
 h3 {
        direction: rtl;    
-   font-size:1.5em;
-   color: #696969; 
-   line-height: 80%;
+   font-size:1.1em;
+   color: #595959;
+   font-weight: bolder;
+   line-height: 108%;
+   margin-right:5px;
+   margin-top:7px;
 }
 
 h4 {
@@ -78,13 +89,21 @@ blockquote {
 
 body {
   max-width:100%;
+  font
 }
 
 a, a:visited {
   text-decoration: underline;
 }
 
-
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+    .descr {
+        font-size: 0.8em;
+    }
+}
 
 
 .d3-tip {
