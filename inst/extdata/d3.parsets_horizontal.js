@@ -353,9 +353,9 @@
               .attr("y", -20)
               .attr("height", 20);
           categoryEnter.append("line")
-              .style("stroke-width", 2.5);
+              .style("stroke-width", 1.3);
           categoryEnter.append("text")
-          	  .attr("x", 0.7)
+          	  .attr("x", 2.2)
               .attr("dy", ".25em");
           category.select("rect")
               .attr("width", function(d) { return d.dx; })
@@ -370,7 +370,7 @@
 
     // Have the right-hand side labels wihtin the graphic
 	var bgnodes = d3.selectAll(".category-background");
-	bgnodes.each(function(d) {d3.select(this.parentNode).select("text").attr("text-anchor", "end").attr("x", -3.7)});
+	bgnodes.each(function(d) {d3.select(this.parentNode).select("text").attr("text-anchor", "end").attr("x", -4)});
 
 	// Centre all label at the center of the ribbon
 	var catnodes = d3.selectAll(".category");

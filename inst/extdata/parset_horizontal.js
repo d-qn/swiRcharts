@@ -3,15 +3,10 @@
 // ----------------------------------------------------------------------------------------
 // ---> should replace parset-binding-0.0.1/parset.js
 HTMLWidgets.widget({
-
   name: 'parset',
-
   type: 'output',
-
   initialize: function(el, width, height) {
-
     return {}
-
   },
 
   renderValue: function(el, x, instance) {
@@ -23,8 +18,8 @@ HTMLWidgets.widget({
     // empty container in case of dynamic/Shiny situation
     el.innerHTML = "";
     var parset = d3.parsets()
-                  .width(width-30)
-                  .height(height-100);
+                  .width(width)
+                  .height(height-40);
 
     // set options for parset with x.options from R arguments
     Object.keys(x.options).forEach(
@@ -43,7 +38,7 @@ HTMLWidgets.widget({
                   .attr("height", width)
                   // Following 2 lines to make horizontal parset https://www.jasondavies.com/parallel-sets/rotate.html
                   .append("g")
-                  .attr("transform", "translate(0," + width + ")rotate(-90)");
+                  .attr("transform", "translate(-30,0)translate(0," + width + ")rotate(-90)");
 
     vis.datum(data).call(parset);
 
