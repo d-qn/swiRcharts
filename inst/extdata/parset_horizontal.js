@@ -18,8 +18,8 @@ HTMLWidgets.widget({
     // empty container in case of dynamic/Shiny situation
     el.innerHTML = "";
     var parset = d3.parsets()
-                  .width(width)
-                  .height(height-40);
+                  .width(width-18)
+                  .height(height-35);
 
     // set options for parset with x.options from R arguments
     Object.keys(x.options).forEach(

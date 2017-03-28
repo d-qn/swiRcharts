@@ -122,9 +122,9 @@
               .attr("y", -45)
               .attr("height", 45);
           // Hide dimension label
-          // var textEnter = dEnter.append("text")
-          //     .attr("class", "dimension")
-          //     .attr("transform", "translate(0,-25)");
+          var textEnter = dEnter.append("text")
+              .attr("class", "dimension")
+              .attr("transform", "translate(0,-25)");
           // textEnter.append("tspan")
           //     .attr("class", "name")
           //     .text(dimensionFormatName);
@@ -133,11 +133,11 @@
           //     .attr("dx", "2em")
           //     .text("alpha »")
           //     .on("mousedown.parsets", cancelEvent);
-          // textEnter.append("tspan")
-          //     .attr("class", "sort size")
-          //     .attr("dx", "2em")
-          //     .text("size »")
-          //     .on("mousedown.parsets", cancelEvent);
+          textEnter.append("tspan")
+              .attr("class", "sort size")
+              .attr("dy", "-1em")
+              .text("size »")
+              .on("mousedown.parsets", cancelEvent);
           dimension
               .call(d3.behavior.drag()
                 .origin(identity)
@@ -182,8 +182,8 @@
                       .attr("transform", "translate(0," + d.y + ")")
                       .tween("ribbon", ribbonTweenY);
                 }));
-          dimension.select("text").select("tspan.sort.alpha")
-              .on("click.parsets", sortBy("alpha", function(a, b) { return a.name < b.name ? 1 : -1; }, dimension));
+          // dimension.select("text").select("tspan.sort.alpha")
+          //     .on("click.parsets", sortBy("alpha", function(a, b) { return a.name < b.name ? 1 : -1; }, dimension));
           dimension.select("text").select("tspan.sort.size")
               .on("click.parsets", sortBy("size", function(a, b) { return a.count - b.count; }, dimension));
           dimension.transition().duration(duration)
@@ -353,9 +353,10 @@
               .attr("y", -20)
               .attr("height", 20);
           categoryEnter.append("line")
-              .style("stroke-width", 1.3);
+              .style("stroke-width", 3);
           categoryEnter.append("text")
           	  .attr("x", 2.2)
+              .attr("font-size", "0.85em")
               .attr("dy", ".25em");
           category.select("rect")
               .attr("width", function(d) { return d.dx; })
@@ -377,8 +378,6 @@
 	catnodes.each(function(d) {
 		d3.select(this).select("text").attr("y", -(d3.select(this).select("line").attr("x2")) / 2)
 	});
-
-
 
         }
       });
@@ -612,7 +611,7 @@
     return function(d, i) {
       var t = this.textContent = text(d, i),
           w = width(d, i);
-      if (this.getComputedTextLength() < w+100) return t;
+      if (this.getComputedTextLength() < w + 200) return t;
       this.textContent = "…" + t;
       var lo = 0,
           hi = t.length + 1,

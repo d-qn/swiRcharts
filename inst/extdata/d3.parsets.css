@@ -1,41 +1,55 @@
-body, h1, h2, h3, h4, h5, h6, .descr, td {
-   font-family: 'Open Sans', sans-serif;
-   background-color: white;
-   font-size: 0.6em;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic-ext');
+
+body, h1, h2, h3, h4, h5, h6, .descr {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 0.95em;
+   letter-spacing: .01em;
 }
 
 #cite {
-    font-size: 8px; color: #B8B8B8; text-align: right; margin-top:5px; margin-right:5px; padding-bottom: 3px;
+    font-size: 8px;
+    color: #B8B8B8;
+    text-align: right;
+    margin-top:7px;
+    margin-right:7px;
+    padding-bottom: 3px;
 }
 #cite a { text-decoration: none; color: #821122; }
 
 #footer {
-    font-size: 10.5px; color: #9B9B9B; 
-    margin-top:8px; 
+    font-size: 10.5px;
+    color: #9B9B9B;
+    margin-top:8px;
     background-color: #F6F6F6;
     padding: 8px;
 }
 #footer a { text-decoration: none; color: #821122; }
 
-
 .descr {
- font-size: 1.2em; color: #707070;
+  color: #707070;
+  margin-bottom: 3px;  
+  margin-left: 1%;
 }
-     
+
 h1 {
-   font-size:3.3em;
+   font-size:1.6em;
 }
 
 h2 {
-   font-size:2.5em;
-   font-weight: lighter;
+   font-size:1.5em;
    line-height: 80%;
+   margin-bottom: 7px;
+   margin-top: 7px;
+   margin-left: 1%;
 }
 
 h3 {
-   font-size:1.5em;
-   color: #696969; 
+   font-size:1.05em;
+   color: #696969;
    line-height: 80%;
+   margin-top: 8px;
+   margin-bottom: 6px;  
+   margin-left: 1%;
 }
 
 h4 {
@@ -49,22 +63,9 @@ h5 {
 h6 {
    font-size:0.8em;
 }
-    
 
 a:visited {
    color: rgb(50%, 0%, 50%);
-}
-
-td, th {
-  border: none;
-  font-size:0.95em;
-}
-
-blockquote {
-   color:#666666;
-   margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
 }
 
 body {
@@ -88,7 +89,7 @@ a, a:visited {
 .parset .dimension > rect { display: none; }
 .parset .category:hover rect { fill-opacity: .5; }
 .parset .dimension:hover > rect { fill-opacity: .5; }
-.parset .ribbon path { stroke-opacity: 0; fill-opacity: .5; }
+.parset .ribbon path { stroke-opacity: 0; fill-opacity: .55; }
 .parset .ribbon path.active { fill-opacity: .9; }
 .parset .ribbon-mouse path { fill-opacity: 0; }
 
@@ -101,12 +102,12 @@ a, a:visited {
 .parset .category-6 { fill: #ac673e; stroke: #ac673e; }
 .parset .category-7 { fill: #3a9736; stroke: #3a9736; }
 .parset .category-8 { fill: #333366; stroke: #333366; }
-.parset .category-9 { fill: #999966; stroke: #999966; }
-
+.parset .category-9 { fill: #193442; stroke: #193442; }
+.parset .category-10 { fill: #999966; stroke: #999966; }
 
 .parsets.tooltip {
   background-color: rgba(242, 242, 242, .6);
   position: absolute;
-  padding: 3px;
-  font-size:1.2em;
+  padding: 2px;
+  font-size:0.9em;
 }
