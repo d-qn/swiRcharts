@@ -68,7 +68,7 @@ swi_widget <- function(
   if(footer != "") {
     cat('\n<!-- Footer -->\n<div id="footer">', footer, "</div>")
   }
-
+  cat(iframeresizer)
   cat("\n</body>\n</html>")
   sink()
   
