@@ -18,7 +18,6 @@ http://stackoverflow.com/questions/15130311/highcharts-labels-visible-over-toolt
   padding:5px;
 }
 
-
 /*  #######   header and footer styling   ########*/
 
 body, h1, h2, h3, h4, h5, h6, .descr, .h2abs, #cite {
@@ -102,7 +101,6 @@ h6 {
    font-size:0.8em;
 }
 
-
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
@@ -114,11 +112,17 @@ body {
 a, a:visited {
     text-decoration: underline;
 }
-   
+
+/* https://stackoverflow.com/questions/11984767/how-to-apply-text-align-left-in-the-first-column-and-text-align-right-in-the-oth , specify class table then when creating it*/
+.table {
+  cellpadding="1" style="line-height:1.1"
+}
+.table td:first-child { text-align: left; }
+.table td:last-child { text-align: right; }
+
 @media only screen and (max-width: 600px) {
-  body {font-size: 14px;}
+  body {font-size: 16px;}
   .descr {font-size: 0.8em;}
 }
-
 
 </style>
