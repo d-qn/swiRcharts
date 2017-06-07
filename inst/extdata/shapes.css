@@ -1,0 +1,39 @@
+/* From https://1stwebdesigner.com/css-shapes/ size divided by*/
+
+
+#rectangle {
+    width: 22px;
+    height: 12px;
+}
+
+#square {
+    width: 12px;
+    height: 12px;
+}
+
+#circle {
+    width: 12px;
+    height: 12px;
+    background: #7fee1d;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+}
+
+#diamond {
+    width: 12px;
+    height: 12px;
+/* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+/* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    margin: 60px 0 10px 310px;
+}
