@@ -1,28 +1,34 @@
-/* From https://1stwebdesigner.com/css-shapes/ size divided by*/
+/* From https://1stwebdesigner.com/css-shapes/ size divided by 10*/
 
 
 #rectangle {
-    width: 22px;
-    height: 12px;
+    width: 20px;
+    height: 15px;
+    background: #768A94;
+    display:inline-block;
 }
 
 #square {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
+    background: #768A94;
+    display:inline-block;
 }
 
 #circle {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: #7fee1d;
     -moz-border-radius: 60px;
     -webkit-border-radius: 60px;
     border-radius: 60px;
+    display:inline-block;
 }
 
 #diamond {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
+    display:inline-block;
 /* Rotate */
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -35,5 +41,5 @@
     -ms-transform-origin: 0 100%;
     -o-transform-origin: 0 100%;
     transform-origin: 0 100%;
-    margin: 60px 0 10px 310px;
+    margin: 5px 0 1px 13px;
 }
