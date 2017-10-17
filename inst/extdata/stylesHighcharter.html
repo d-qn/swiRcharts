@@ -17,18 +17,34 @@ http://stackoverflow.com/questions/15130311/highcharts-labels-visible-over-toolt
 }
 
 /*  #######   header and footer styling   ########*/
-
-body, h1, h2, h3, h4, h5, h6, .descr, .h2abs, #cite {
-   text-rendering: optimizeLegibility;
-   font-smoothing: antialiased;
+body, h1, h2, h3, h4, h5, h6, .descr, .h2abs, #cite, .footer {
    font-family: 'Open Sans Condensed', sans-serif;
-   font-size: 17px;
-   letter-spacing: .01em;
-   margin:12px 12px 2px 3px;
+}
+
+body {
+   max-width:100%;
+   text-rendering:optimizeLegibility;
+   color: #050505;
+   margin:9px 18px 0px 1px;
+}
+/* adapted from: https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+/* Older browsers */
+html { font-size: 16px; }
+  
+/* Modern browsers only need this one */
+@media screen and (min-width: 25em){
+   html { font-size: calc( 16px + (19 - 16) * (100vw - 400px) / (800 - 400) ); }
+}
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em){
+  html { font-size: calc( 16px + (19 - 16) * (100vw - 400px) / (800 - 400) ); }
+}
+@media screen and (min-width: 50em){
+  html { font-size: calc( 16px + (19 - 16) * (100vw - 400px) / (800 - 400) ); }
 }
 
 #cite {
-    font-size: 0.75em;
+    font-size: 0.8em;
     color: #737373;
     text-align: right;
     position: relative;
@@ -39,7 +55,7 @@ body, h1, h2, h3, h4, h5, h6, .descr, .h2abs, #cite {
 #cite a { text-decoration: none; color: #821122; }
 
 .footer {
-  font-size: 0.85em;
+  font-size: 0.9em;
   color: #808080;
   margin-left:0.7%;
   margin-bottom:8px;
@@ -67,19 +83,18 @@ h1 {
 }
 
 h2 {
+   font-size:1.3em;
    font-size:1.2em;
    font-weight: bolder;
    color: #404040;
-   line-height: 105%;
-   margin-bottom:3px;
-   margin-left:3px;
+   line-height: 1.6rem;
+   margin:10px 0px 10px 3px;
 }
 
 .h2abs {
-   font-size:1.2em;
+   font-size:1.3em;
    font-weight: bolder;
-   color: #404040;
-   line-height: 105%;
+   line-height: 1.6rem;
    margin-top:14px;
    margin-left:12px;
    position: absolute;
@@ -90,7 +105,7 @@ h3 {
    color: #595959;
    font-size:0.95em;
    margin-left:3px;
-   margin-bottom:8px;
+   margin:8px 0px 8px 3px;
 }
 
 h4 {
@@ -109,10 +124,6 @@ a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-body {
-  max-width:100%;
-}
-
 a, a:visited {
     text-decoration: underline;
 }
@@ -123,11 +134,5 @@ a, a:visited {
 }
 .table td:first-child { text-align: left; }
 .table td:last-child { text-align: right; }
-
-@media only screen and (max-width: 600px) {
-  body {font-size: 16px;}
-  .descr {font-size: 0.8em;}
-  #cite {font-size: 0.6em;}
-}
 
 </style>
