@@ -27,20 +27,10 @@ body {
    color: #050505;
    margin:9px 18px 0px 1px;
 }
-/* adapted from: https://www.smashingmagazine.com/2016/05/fluid-typography/ */
-/* Older browsers */
-html { font-size: 16px; }
+html { font-size: 17px; }
   
-/* Modern browsers only need this one */
-@media screen and (min-width: 25em){
-   html { font-size: calc( 16px + (18 - 16) * (100vw - 400px) / (800 - 400) ); }
-}
-/* Safari <8 and IE <11 */
-@media screen and (min-width: 25em){
-  html { font-size: calc( 16px + (18 - 16) * (100vw - 400px) / (800 - 400) ); }
-}
-@media screen and (min-width: 50em){
-  html { font-size: calc( 16px + (18 - 16) * (100vw - 400px) / (800 - 400) ); }
+@media only screen and (max-width: 600px) {
+  html { font-size: 15px; }
 }
 
 #cite {
@@ -67,7 +57,7 @@ html { font-size: 16px; }
 }    
     
 .descr {
- font-size: 1.05em;
+ font-size: 1em;
  font-weight: lighter;
  color: #707070;
  margin-bottom:4px;
@@ -83,15 +73,15 @@ h1 {
 }
 
 h2 {
-   font-size:1.3em;
+   font-size:1.2em;
    font-weight: bolder;
    color: #404040;
-   line-height: 1.6rem;
-   margin:10px 0px 10px 3px;
+   line-height: 1.5rem;
+   margin:9px 0px 9px 3px;
 }
 
 .h2abs {
-   font-size:1.3em;
+   font-size:1.2em;
    font-weight: bolder;
    line-height: 1.6rem;
    margin-top:14px;
