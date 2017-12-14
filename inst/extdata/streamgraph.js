@@ -297,6 +297,7 @@ HTMLWidgets.widget({
           .attr("x", function(d) { return(x(d.x)) ; })
           .attr("y", function(d) { return(y(d.y)) ; })
           .attr("fill", function(d) { return(d.color) ; })
+          .attr("text-anchor", "end") 
           .style("font-size", function(d) { return(d.size+"px") ; })
           .text(function(d) { return(d.label) ;});
     }
