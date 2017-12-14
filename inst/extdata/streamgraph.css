@@ -83,7 +83,13 @@ h3 {
 }
 
 h4 {
-   font-size:1.5em;
+   font-size:1em;
+   position: relative;
+   top: 2px;
+   margin-left:5px;
+   color: #595959;
+   margin-top:0px;
+   margin-bottom:3px;
 }
 
 h5 {
