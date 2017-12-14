@@ -23,6 +23,7 @@ select, option, label {
 body, h1, h2, h3, h4, h5, h6, .descr, td {
    font-family: 'Open Sans Condensed', sans-serif;
    background-color: white;
+   margin-right:10px;
 }
 
 #cite {
@@ -107,7 +108,7 @@ blockquote {
 
 body {
   max-width:100%;
-  font-size: 18px;   
+  font-size: 18px;  
 }
 
 a, a:visited {

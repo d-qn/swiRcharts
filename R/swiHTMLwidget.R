@@ -115,7 +115,7 @@ swi_libWidget_overwrite <- function(dirPath = ".") {
     
     # copy the RTL variant
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-    "streamgraph_rtl.js", full.names = T), to = dirname(original), overwrite = T)
+    "streamgraph_rtl.js", full.names = T), to = file.path(dirname(original), "streamgraph_rtl.js") , overwrite = T)
   }
   original <- list.files(dirPath, "streamgraph.css", full.names = T, recursive = T)
   if(!identical(original, character(0))) {
@@ -124,7 +124,7 @@ swi_libWidget_overwrite <- function(dirPath = ".") {
     
     # copy the RTL variant
     file.copy( from = list.files(system.file("extdata", package="swiRcharts"),
-      "streamgraph_rtl.css", full.names = T), to = dirname(original), overwrite = T)
+      "streamgraph_rtl.css", full.names = T), to = file.path(dirname(original), "streamgraph_rtl.css"), overwrite = T)
   }
   
   ## For sunburstR: overwrite its CSS "sequences.css" and sunburst.js in the javacript folder
