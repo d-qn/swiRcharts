@@ -149,7 +149,7 @@ HTMLWidgets.widget({
     if (params.interactive) {
 
       tooltip = svg.append("g")
-      .attr("transform", "translate(30,10)")
+      .attr("transform", "translate(30,11)")
       .append("text")
       .attr("class", "tooltip");
 
@@ -297,7 +297,7 @@ HTMLWidgets.widget({
           .attr("x", function(d) { return(x(d.x)) ; })
           .attr("y", function(d) { return(y(d.y)) ; })
           .attr("fill", function(d) { return(d.color) ; })
-          .attr("text-anchor", "end") 
+          .attr("text-anchor", "end")
           .style("font-size", function(d) { return(d.size+"px") ; })
           .text(function(d) { return(d.label) ;});
     }
