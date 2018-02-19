@@ -4,12 +4,15 @@
 \name{hc_theme_swi}
 \alias{hc_theme_swi}
 \alias{style_swi_highcharter}
+\alias{swi_underline_css}
 \title{Highchart(er) SWI theme}
 \format{An object of class \code{hc_theme} of length 8.}
 \usage{
 hc_theme_swi
 
 style_swi_highcharter()
+
+swi_underline_css()
 }
 \description{
 Some helpers to get a SWI look for highcharter
@@ -26,4 +29,3 @@ style_swi_highcharter()
 http://jkunst.com/highcharter/themes.html#create-themes
 }
 \keyword{datasets}
-

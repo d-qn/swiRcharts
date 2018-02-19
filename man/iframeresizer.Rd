@@ -20,4 +20,3 @@ iframeresizer
 https://github.com/davidjbradshaw/iframe-resizer
 }
 \keyword{datasets}
-

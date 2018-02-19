@@ -102,12 +102,16 @@ hc_theme_swi <- highcharter::hc_theme(
   )
 )
 
-
 ##' @rdname swi_highcharter
 ##' @export
 ##' @examples
 ##' style_swi_highcharter()
-
 style_swi_highcharter <- function() {
   list.files(system.file("extdata", package="swiRcharts"), 'stylesHighcharter.html', full.names = T)
+}
+
+##' @rdname swi_highcharter
+##' @export
+swi_underline_css <- function() {
+  list.files(system.file("extdata", package="swiRcharts"), 'swi_underline.css', full.names = T)
 }

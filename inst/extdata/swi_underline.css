@@ -1,0 +1,17 @@
+/*class to underline in SWI colors, use like that <span class="underl dblue">safasd</span>*/
+
+.underl.dblue {
+    border-bottom:3px solid #193442; 
+}
+
+.underl.sblue {
+    border-bottom:3px solid #4c6570; 
+}
+
+.underl.sred{
+    border-bottom:3px solid #b15953; 
+}
+
+.underl.dred{
+    border-bottom:3px solid #72302f; 
+}
