@@ -112,6 +112,14 @@ style_swi_highcharter <- function() {
 
 ##' @rdname swi_highcharter
 ##' @export
+##' @examples
+##' style_swi_highcharter_centered()
+style_swi_highcharter_centered <- function() {
+  list.files(system.file("extdata", package="swiRcharts"), 'stylesHighcharter_centered.html', full.names = T)
+}
+
+##' @rdname swi_highcharter
+##' @export
 swi_underline_css <- function() {
   list.files(system.file("extdata", package="swiRcharts"), 'swi_underline.css', full.names = T)
 }

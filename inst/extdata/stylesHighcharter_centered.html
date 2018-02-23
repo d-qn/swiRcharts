@@ -1,0 +1,122 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext" rel="stylesheet">
+<style>
+
+/* ensure data labels are not visible over the tooltip:
+http://stackoverflow.com/questions/15130311/highcharts-labels-visible-over-tooltip */
+.label {
+  z-index: 1 !important;
+}
+
+.highcharts-tooltip span {
+  opacity:1;
+  z-index:9000 !important;
+}
+
+.tooltip {
+  padding:5px;
+}
+
+/*  #######   header and footer styling   ########*/
+body, h1, h2, h3, h4, h5, h6, .descr, .h2abs, #cite, .footer {
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+   max-width:100%;
+   text-rendering:optimizeLegibility;
+   color: #050505;
+   margin:9px 18px 0px 1px;
+}
+html { font-size: 18px; }
+  
+@media only screen and (max-width: 600px) {
+  html { font-size: 15px; }
+}
+
+#cite {
+    font-size: 0.8em;
+    color: #737373;
+    text-align: right;
+    position: relative;
+    margin-right:10px;
+    margin-top:21px;
+    padding-bottom: 3px;
+}
+#cite a { text-decoration: none; color: #821122; }
+
+.footer {
+  font-size: 0.9em;
+  color: #808080;
+  margin-left:0.7%;
+  margin-bottom:8px;
+  max-width:96%;
+}
+
+.graphic{
+  max-width:100%;    
+}    
+    
+.descr {
+ text-align: center;
+ font-size: 1em;
+ font-weight: lighter;
+ color: #707070;
+ margin-bottom:10px;
+ margin-left:3px;
+}
+
+.tp {
+  font-size: 0.75em;
+}
+
+h1 {
+   font-size:2em;
+}
+
+h2 {
+   text-align: center;
+   font-size:1.4em;
+   font-weight: bolder;
+   color: #404040;
+   line-height: 1.8rem;
+   margin:8px 0px 10px 3px;
+}
+
+.h2abs {
+   font-size:1.2em;
+   font-weight: bolder;
+   line-height: 1.6rem;
+   margin-top:14px;
+   margin-left:12px;
+   position: absolute;
+   z-index: 900;
+}
+
+h3 {
+   text-align: center;
+   color: #595959;
+   font-size:1em;
+   margin:7px 0px 12px 3px;
+}
+
+h4 {
+   font-size:1.1em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+a, a:visited {
+    text-decoration: underline;
+}
+
+</style>
