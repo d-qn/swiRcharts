@@ -4,6 +4,7 @@
 \name{hc_theme_swi}
 \alias{hc_theme_swi}
 \alias{style_swi_highcharter}
+\alias{style_swi_highcharter_centered}
 \alias{swi_underline_css}
 \title{Highchart(er) SWI theme}
 \format{An object of class \code{hc_theme} of length 8.}
@@ -11,6 +12,8 @@
 hc_theme_swi
 
 style_swi_highcharter()
+
+style_swi_highcharter_centered()
 
 swi_underline_css()
 }
@@ -24,6 +27,7 @@ data(diamonds, mpg, package = "ggplot2")
 hchart(mpg, "scatter", x = displ, y = hwy, group = class) \%>\% hc_add_theme(hc_theme_swi)
 }
 style_swi_highcharter()
+style_swi_highcharter_centered()
 }
 \seealso{
 http://jkunst.com/highcharter/themes.html#create-themes
