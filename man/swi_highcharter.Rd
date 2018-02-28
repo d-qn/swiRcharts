@@ -5,7 +5,7 @@
 \alias{hc_theme_swi}
 \alias{style_swi_highcharter}
 \alias{style_swi_highcharter_centered}
-\alias{swi_underline_css}
+\alias{swi_highlight_css}
 \title{Highchart(er) SWI theme}
 \format{An object of class \code{hc_theme} of length 8.}
 \usage{
@@ -15,7 +15,7 @@ style_swi_highcharter()
 
 style_swi_highcharter_centered()
 
-swi_underline_css()
+swi_highlight_css()
 }
 \description{
 Some helpers to get a SWI look for highcharter

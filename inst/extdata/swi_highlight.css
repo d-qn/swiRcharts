@@ -1,0 +1,33 @@
+/*class to highlight in SWI colors, use like that <span class="hl dblue">safasd</span>*/
+
+.hl.dblue {
+    background-color: #193442; 
+    color: #f2f2f2;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 0px;
+}
+
+.hl.sblue {
+    background-color: #4c6570; 
+    color: #f2f2f2;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 0px;
+}
+
+.hl.sred{
+    background-color: #b15953; 
+    color: #f2f2f2;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 0px;
+}
+
+.hl.dred{
+    background-color: #72302f;
+    color: #f2f2f2;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 0px;
+}
